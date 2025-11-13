@@ -15,16 +15,25 @@ public class Main {
 
         System.out.println("Задания 2");
 
-        int iOS = 0;
+        clientOS = 0;
         int clientDeviceYear = 2015;
 
-        String osName = (clientOS == 1) ? "Android" : "iOS";
-        String version = (clientDeviceYear < 2015) ? "облегченную версию" : "версию";
+        if (clientDeviceYear < 2015) {
 
-        System.out.println("Установите " + version + " приложения для " + osName + " по ссылке");
+            if (clientOS == 0) {
+                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+            } else {
+                System.out.println("Установите облегченную версию приложения для Android по ссылке");
+            }
+        } else {
 
+            if (clientOS == 0) {
+                System.out.println("Установите версию приложения для iOS по ссылке");
+            } else {
+                System.out.println("Установите версию приложения для Android по ссылке");
+            }
 
-        System.out.println("Задания 3");
+            System.out.println("Задания 3");
         int year = 1584;
 
         if (year <= 1584) {
@@ -59,23 +68,24 @@ public class Main {
 
             int monthNumber = 12;
 
-            if (monthNumber < 1 || monthNumber > 12) {
-                System.out.println("Ошибка: номер месяца должен быть от 1 до 12");
-                return;
+            switch (monthNumber) {
+                case 12: case 1: case 2:
+                    System.out.println("Месяц №" + monthNumber + " - зима");
+                    break;
+                case 3: case 4: case 5:
+                    System.out.println("Месяц №" + monthNumber + " - весна");
+                    break;
+                case 6: case 7: case 8:
+                    System.out.println("Месяц №" + monthNumber + " - лето");
+                    break;
+                case 9: case 10: case 11:
+                    System.out.println("Месяц №" + monthNumber + " - осень");
+                    break;
+                default:
+                    System.out.println("Ошибка: номер месяца должен быть от 1 до 12");
             }
-
-            String season = switch (monthNumber) {
-                case 12, 1, 2 -> "зима";
-                case 3, 4, 5 -> "весна";
-                case 6, 7, 8 -> "лето";
-                case 9, 10, 11 -> "осень";
-                default -> "неизвестный сезон";
-            };
-
-            System.out.println("Месяц №" + monthNumber + " принадлежит к сезону: " + season);
-        }
     }
-}
+}}}
 
 
 
