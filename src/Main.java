@@ -15,23 +15,18 @@ public class Main {
 
         System.out.println("Задания 2");
 
-        clientOS = 0;
+        int client1OS = 0;
         int clientDeviceYear = 2015;
 
-        if (clientDeviceYear < 2015) {
-
-            if (clientOS == 0) {
-                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-            } else {
-                System.out.println("Установите облегченную версию приложения для Android по ссылке");
-            }
+        if (client1OS == 0 && clientDeviceYear < 2015) {
+            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+        } else if (client1OS == 0) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        } else if (clientDeviceYear < 2015) {
+            System.out.println("Установите облегченную версию приложения для Android по ссылке");
         } else {
-
-            if (clientOS == 0) {
-                System.out.println("Установите версию приложения для iOS по ссылке");
-            } else {
-                System.out.println("Установите версию приложения для Android по ссылке");
-            }
+            System.out.println("Установите версию приложения для Android по ссылке");
+        }
 
             System.out.println("Задания 3");
         int year = 1584;
@@ -85,7 +80,7 @@ public class Main {
                     System.out.println("Ошибка: номер месяца должен быть от 1 до 12");
             }
     }
-}}}
+}}
 
 
 
